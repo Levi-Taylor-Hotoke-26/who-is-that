@@ -21,32 +21,41 @@ body {
 
   #title {
     font-family: 'Pokemon Solid', sans-serif;
-    color: rgb(255, 204, 0);
-    -webkit-text-stroke-color: rgb(55, 93, 169);
-    -webkit-text-stroke-width: 2px;
-    text-shadow: 2px 2px black;
-    letter-spacing: 3px;
-    font-size: 20px;
+    color: #ffcb05;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 
+        -2px -2px 0 #3b4cca,  
+         2px -2px 0 #3b4cca,
+        -2px  2px 0 #3b4cca,
+         2px  2px 0 #3b4cca,
+         4px  4px 0 #2a3a8a;
   }
 
 #streak {
     font-family: 'Pokemon Solid', sans-serif;
-    color: rgb(255, 204, 0);
-    -webkit-text-stroke-color: rgb(55, 93, 169);
-    -webkit-text-stroke-width: 2px;
-    text-shadow: 2px 2px black;
-    letter-spacing: 3px;
-    font-size: 20px;
+    color: #ffcb05;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 
+        -2px -2px 0 #3b4cca,  
+         2px -2px 0 #3b4cca,
+        -2px  2px 0 #3b4cca,
+         2px  2px 0 #3b4cca,
+         4px  4px 0 #2a3a8a;
 }
 
   #pokemon-name {
     font-family: 'Pokemon Solid', sans-serif;
-    color: rgb(55, 93, 169);
-    -webkit-text-stroke-color: rgb(255, 204, 0);
-    -webkit-text-stroke-width: 2px;
-    text-shadow: 2px 2px black;
-    letter-spacing: 3px;
-    font-size: 20px;
+    color: #ffcb05;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 
+        -2px -2px 0 #3b4cca,  
+         2px -2px 0 #3b4cca,
+        -2px  2px 0 #3b4cca,
+         2px  2px 0 #3b4cca,
+         4px  4px 0 #2a3a8a;
   }
 
   #sprite {
