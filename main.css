@@ -22,12 +22,7 @@ body {
     font-family: 'Pokemon', sans-serif;
     color: #ffcb05;
     letter-spacing: 2px;
-    text-shadow: 
-        -2px -2px 0 #3b4cca,  
-         2px -2px 0 #3b4cca,
-        -2px  2px 0 #3b4cca,
-         2px  2px 0 #3b4cca,
-         4px  4px 0 #2a3a8a;
+    text-shadow: -2px -2px 0 #3b4cca, 2px -2px 0 #3b4cca, -2px  2px 0 #3b4cca, 2px  2px 0 #3b4cca, 4px  4px 0 #2a3a8a;
 }
 
   #pokemon {
@@ -62,6 +57,7 @@ body {
     position: absolute;
     bottom: 34%;
     left: 15%;
+    image-rendering: pixelated;
   }
 
   #guess {
@@ -76,3 +72,5 @@ body {
     border-radius: 8px;
     outline: none;
   }
+
+  #guess:focus { box-shadow: 0 0 4px 2px #3b4cca; }
