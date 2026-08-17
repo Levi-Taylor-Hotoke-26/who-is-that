@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('fonts/Pokemon-Solid.woff2') format('woff2'),
+         url('fonts/Pokemon-Solid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 body {
     background-image: url(https://github.com/marinsborg/who-is-that-pokemon/blob/main/background.jpg?raw=true);
     background-repeat: no-repeat;
@@ -7,11 +14,13 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0px;
+    background-position: center;
+    justify-content: center;
+    min-height: 100vh;
   }
 
-  #title,
-  #streak {
-    font-family: 'pokemon', sans-serif;
+  #title {
+    font-family: 'Pokemon Solid', sans-serif;
     color: rgb(255, 204, 0);
     -webkit-text-stroke-color: rgb(55, 93, 169);
     -webkit-text-stroke-width: 2px;
@@ -20,8 +29,18 @@ body {
     font-size: 20px;
   }
 
+#streak {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: rgb(255, 204, 0);
+    -webkit-text-stroke-color: rgb(55, 93, 169);
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 2px 2px black;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
   #pokemon-name {
-    font-family: 'pokemon', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
     color: rgb(55, 93, 169);
     -webkit-text-stroke-color: rgb(255, 204, 0);
     -webkit-text-stroke-width: 2px;
@@ -31,14 +50,21 @@ body {
   }
 
   #sprite {
-    transition: initial;
+    /* transition: initial; */
     filter: brightness(0);
     height: 250px;
     width: 250px;
+    /* transform: translateX(-24vw); */
+    position: absolute;
+    bottom: 34%;
+    left: 15%;
   }
 
   #guess {
-    height: 20px;
+    position: absolute;
+    height: 40px;
     width: 300px;
     text-align: center;
+    bottom: 55%;
+    right: 10%;
   }
