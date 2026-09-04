@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Who's that Pokemon?</title>
+  <title>Who's that Pokémon?</title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="./main.css" rel="stylesheet" type="text/css" />
@@ -10,16 +10,19 @@
 </head>
 
 <body>
-  <span id="pokemon">Pokémon!
-  </span>
-  <!-- sprite -->
-  <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png">
-  <!--input text box-->
-  <input id="guess" type="text" placeholder="Who's that Pokemon?">
-  <!--streak counter-->
-  <span id="streak">Streak: 0</span>
-  <!--pokemon name-->
-  <span id="pokemon-name"></span>
+  <main>
+    <h1 id="pokemon">Pokémon!</h1>
+    <!-- sprite -->
+    <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png"
+      alt="a pokemon sprite">
+    <!--input text box-->
+    <label for="guess" class="sr-only">Guess the Pokémon</label>
+    <input id="guess" type="text" placeholder="Who's that Pokemon?">
+    <!--streak counter-->
+    <h2 id="streak">Streak: 0</h2>
+    <!--pokemon name-->
+    <div id="pokemon-name"></div>
+  </main>
   <script type="module" src="./main.js"></script>
 </body>
 

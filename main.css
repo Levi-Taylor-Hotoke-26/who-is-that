@@ -5,73 +5,117 @@
 }
 
 body {
-    background-image: url(https://github.com/marinsborg/who-is-that-pokemon/blob/main/background.jpg?raw=true);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    margin:0;
-    background-position: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-
-  #pokemon, #streak, #pokemon-name {
-    font-family: 'Pokemon', sans-serif;
-    color: #ffcb05;
-    letter-spacing: 2px;
-    text-shadow: -2px -2px 0 #3b4cca, 2px -2px 0 #3b4cca, -2px  2px 0 #3b4cca, 2px  2px 0 #3b4cca, 4px  4px 0 #2a3a8a;
+  background-image: url(https://github.com/marinsborg/who-is-that-pokemon/blob/main/background.jpg?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  background-position: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-  #pokemon {
-    position: absolute;
-    bottom: 1%;
-    right: 12%;
-    font-size: 8rem;
-    display: inline-block;
-    transform: perspective(400px) rotateX(-30deg) skewX(-20deg);
-  }
+#pokemon, #streak, #pokemon-name {
+  font-family: 'Pokemon', sans-serif;
+  color: #ffcb05;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #3b4cca, 2px -2px 0 #3b4cca, -2px 2px 0 #3b4cca, 2px 2px 0 #3b4cca, 4px 4px 0 #2a3a8a;
+  /* Dark backdrop ensures contrast algorithm evaluates text above 4.5:1 */
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  padding: 4px 12px;
+}
 
-  #streak {
-    position: absolute;
-    top: 5%;
-    right: 12%;
-    font-size: 5rem;
-  }
+#pokemon {
+  position: absolute;
+  bottom: 1%;
+  right: 12%;
+  font-size: 8rem;
+  display: inline-block;
+  transform: perspective(400px) rotateX(-30deg) skewX(-20deg);
+  margin: 0;
+}
 
-  #pokemon-name {
-    position: absolute;
-    top: 30%;
-    right: 40%;
-    font-size: 5rem;
-  }
+#streak {
+  position: absolute;
+  top: 5%;
+  right: 12%;
+  font-size: 5rem;
+  margin: 0;
+}
 
-  #sprite {
-    /* transition: initial; */
-    filter: brightness(0);
-    height: 250px;
-    width: auto;
-    /* transform: translateX(-24vw); */
-    position: absolute;
-    bottom: 40%;
-    left: 18%;
-    image-rendering: pixelated;
-  }
+#pokemon-name {
+  position: absolute;
+  top: 30%;
+  right: 40%;
+  font-size: 5rem;
+}
 
-  #guess {
-    position: absolute;
-    height: 60px;
-    width: 300px;
-    text-align: center;
-    bottom: 50%;
-    right: 15%;
-    font-size: 1.2rem;
-    border: 2px solid #3b4cca;
-    border-radius: 8px;
-    outline: none;
-  }
+#sprite {
+  filter: brightness(0);
+  height: 250px;
+  width: auto;
+  position: absolute;
+  bottom: 40%;
+  left: 18%;
+  image-rendering: pixelated;
+}
 
-  #guess:focus { box-shadow: 0 0 4px 2px #3b4cca; }
+#guess {
+  position: absolute;
+  height: 60px;
+  width: 300px;
+  text-align: center;
+  bottom: 50%;
+  right: 15%;
+  font-size: 1.2rem;
+  border: 2px solid #3b4cca;
+  border-radius: 8px;
+  outline: none;
+}
+
+#guess:focus {
+  box-shadow: 0 0 4px 2px #3b4cca;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Indicator: Guarantees visible outline during Tab key navigation */
+:focus-visible {
+  outline: 3px solid #ffcb05 !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 8px #3b4cca !important;
+}
+
+/* Form Container for Natural DOM Tab Order */
+#guess-form {
+  position: absolute;
+  bottom: 50%;
+  right: 15%;
+  display: flex;
+  gap: 10px;
+}
+
+#submit-btn {
+  background-color: #3b4cca;
+  color: #ffffff;
+  border: 2px solid #ffcb05;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
