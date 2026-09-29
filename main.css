@@ -17,6 +17,7 @@ body {
   background-position: center;
   justify-content: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 #pokemon, #streak, #pokemon-name {
@@ -24,7 +25,6 @@ body {
   color: #ffcb05;
   letter-spacing: 2px;
   text-shadow: -2px -2px 0 #3b4cca, 2px -2px 0 #3b4cca, -2px 2px 0 #3b4cca, 2px 2px 0 #3b4cca, 4px 4px 0 #2a3a8a;
-  /* Dark backdrop ensures contrast algorithm evaluates text above 4.5:1 */
   background-color: rgba(0, 0, 0, 0.45);
   border-radius: 8px;
   padding: 4px 12px;
